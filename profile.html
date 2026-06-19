@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プロフィール | 日越共生Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-container-low": "#f5f3f3", "background": "#fbf9f8",
+        "secondary": "#bb0014", "tertiary": "#0f1112", "outline": "#757681",
+        "primary": "#000d33", "surface-container-lowest": "#ffffff",
+        "on-tertiary": "#ffffff", "secondary-fixed": "#ffdad6",
+        "surface": "#fbf9f8", "on-primary": "#ffffff", "on-secondary": "#ffffff",
+        "on-surface": "#1b1c1c", "tertiary-container": "#242626",
+        "tertiary-fixed-dim": "#c6c6c7", "primary-fixed": "#dbe1ff",
+        "surface-container-high": "#eae8e7", "primary-container": "#002060",
+        "outline-variant": "#c5c6d2", "on-background": "#1b1c1c",
+        "on-tertiary-container": "#8c8d8d", "surface-container": "#efeded",
+        "on-surface-variant": "#444650", "surface-container-highest": "#e4e2e2",
+        "primary-fixed-dim": "#b4c5ff", "surface-variant": "#e4e2e2",
+        "secondary-container": "#e71421",
+      },
+      "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      "spacing": { "gutter": "24px", "section-padding": "120px", "margin-mobile": "20px", "base": "8px", "container-max": "1280px", "margin-desktop": "64px" },
+      "fontFamily": { "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Hanken Grotesk"], "display-lg": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Hanken Grotesk"] },
+      "fontSize": {
+        "body-lg": ["18px", {"lineHeight": "28px"}], "body-md": ["16px", {"lineHeight": "24px"}],
+        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}
+</script>
+<style>.material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; display: inline-block; white-space: nowrap; -webkit-font-smoothing: antialiased; }</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+
+<!-- ナビゲーション -->
+<header class="bg-surface top-0 sticky z-50 border-b border-outline-variant">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+    <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary">日越共生<span class="text-secondary">Lab</span></a>
+    <nav class="hidden md:flex gap-gutter items-center h-full">
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="index.html">ホーム</a>
+      <a class="text-primary border-b-2 border-secondary font-bold h-full flex items-center pt-1" href="profile.html">プロフィール</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="service.html">サービス</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="media.html">実績</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="bg-secondary text-on-secondary px-6 py-2 font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary-container transition-colors">お問い合わせ</a>
+  </div>
+</header>
+
+<main class="flex-grow flex flex-col items-center w-full">
+
+  <!-- ヒーロー -->
+  <section class="w-full px-margin-mobile md:px-margin-desktop py-section-padding max-w-container-max">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+      <div class="md:col-span-7 flex flex-col gap-4">
+        <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest">プロフィール</span>
+        <h1 class="text-display-lg font-display-lg text-primary leading-tight">小中 悠一郎</h1>
+        <p class="text-body-lg font-body-lg text-on-surface-variant">ベトナム専門家 / JICA日本語教師 / 日越共生Lab 代表</p>
+        <p class="text-body-md font-body-md text-on-surface-variant max-w-xl mt-2">
+          広島生まれ、福岡育ち。慶應義塾大学退学後、ホーチミン市人文社会科学大学ベトナム学部を正規卒業。JICA海外協力隊として大学で日本語を教える。7年間のベトナム生活を経て、日越共生社会の実現を目指す。
+        </p>
+      </div>
+      <div class="md:col-span-5 relative h-[360px] w-full border border-outline-variant bg-surface-container-low flex items-center justify-center">
+        <div class="text-center p-8">
+          <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-on-primary text-2xl font-bold font-headline-md">小中</span>
+          </div>
+          <p class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">写真をここに追加</p>
+          <p class="text-body-md font-body-md text-on-surface-variant mt-2">ご自身の写真に差し替えてください</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ミッション -->
+  <section class="w-full px-margin-mobile md:px-margin-desktop py-section-padding bg-surface-container-low">
+    <div class="max-w-container-max mx-auto flex flex-col gap-12">
+      <div>
+        <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest">ミッション</span>
+        <h2 class="text-headline-lg font-headline-lg text-primary mt-2">日本とベトナムが共に生きる社会へ</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[240px]">
+        <div class="md:col-span-8 md:row-span-2 bg-surface border border-outline-variant p-12 flex flex-col justify-between">
+          <span class="material-symbols-outlined text-secondary text-4xl">connecting_airports</span>
+          <div>
+            <h3 class="text-headline-md font-headline-md text-primary mb-4">7年間のベトナム生活が教えてくれた、共生のかたち。</h3>
+            <p class="text-body-md font-body-md text-on-surface-variant">日本には現在50万人以上のベトナム人が暮らしています。言語・文化の壁から生まれる困難を、現場経験と両国への深い理解で解決し、日越共生社会の実現に貢献します。</p>
+          </div>
+        </div>
+        <div class="md:col-span-4 bg-primary text-on-primary p-8 flex flex-col justify-between">
+          <span class="material-symbols-outlined text-primary-fixed-dim">school</span>
+          <h4 class="text-body-lg font-body-lg font-semibold">ベトナム語・日本語教育</h4>
+        </div>
+        <div class="md:col-span-4 bg-surface border border-outline-variant p-8 flex flex-col justify-between">
+          <span class="material-symbols-outlined text-secondary">handshake</span>
+          <h4 class="text-body-lg font-body-lg text-primary font-semibold">企業・個人サポート</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 経歴タイムライン -->
+  <section class="w-full px-margin-mobile md:px-margin-desktop py-section-padding max-w-container-max">
+    <div class="flex flex-col gap-12">
+      <div class="border-b border-outline-variant pb-6">
+        <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest">経歴</span>
+        <h2 class="text-headline-lg font-headline-lg text-primary mt-2">歩んできた道</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div class="md:col-span-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-surface-container-low p-6 border border-outline-variant">
+              <span class="text-label-sm font-label-sm text-secondary block mb-2">出身</span>
+              <span class="text-body-md font-body-md text-primary font-semibold">広島生まれ<br/>福岡育ち</span>
+            </div>
+            <div class="bg-surface-container-low p-6 border border-outline-variant">
+              <span class="text-label-sm font-label-sm text-secondary block mb-2">現在</span>
+              <span class="text-body-md font-body-md text-primary font-semibold">ハロン大学<br/>日本語教師</span>
+            </div>
+            <div class="bg-surface-container-low p-6 border border-outline-variant">
+              <span class="text-label-sm font-label-sm text-secondary block mb-2">滞在歴</span>
+              <span class="text-body-md font-body-md text-primary font-semibold">ベトナム<br/>約7年</span>
+            </div>
+            <div class="bg-primary text-on-primary p-6">
+              <span class="text-label-sm font-label-sm text-primary-fixed-dim block mb-2">帰国予定</span>
+              <span class="text-body-md font-body-md font-semibold">2027年<br/>4月</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-8 flex flex-col gap-8 relative border-l-2 border-outline-variant pl-8 ml-4 md:ml-0">
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-secondary">1998年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">広島で生まれる</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">2歳の時、父の仕事の都合で福岡へ。高校卒業まで福岡で過ごす。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-on-surface-variant">2017年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">慶應義塾大学商学部 入学・初渡越</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">上京して慶應に現役入学。同年、初めてベトナムへ1週間旅行。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-on-surface-variant">2018年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">休学・ベトナム＆タイでインターンシップ（計5ヶ月）</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">日本人宿「イージーステイ」でホーチミン・ハノイ・バンコク・チェンマイに滞在。ベトナム人との出会いでベトナムに魅了される。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-on-surface-variant">2019年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">再休学・ホーチミン市人文社会科学大学でベトナム語留学（約6ヶ月）</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">ベトナム語センターの短期コースに通い、ベトナム語に本格的に取り組む。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-secondary">2020年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">慶應義塾大学 退学 → ベトナム学部に正規入学</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">「ベトナムをもっと極めたい」という思いで退学を決意。9月にホーチミン市人文社会科学大学ベトナム学部に入学。日本語教育能力検定試験取得。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-on-surface-variant">2021〜2024年</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">在学中にホーチミン市内の日本語学校で指導経験を積む</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">複数の日本語学校でアルバイト講師として勤務。Kindleで留学体験記を出版。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-outline-variant border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-on-surface-variant">2024年12月</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">ホーチミン市人文社会科学大学 ベトナム学部 卒業</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">日本人として極めて珍しいベトナム大学の正規卒業を達成。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-secondary border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-secondary">2025年〜現在</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">JICA海外協力隊 → ハロン大学 日本語教師</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">2025年1月にJICA参加、5月にハイフォン大学配属、10月にハロン大学に異動。現在約130名の学生に日本語を指導中。</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+            <span class="text-label-sm font-label-sm text-primary">2027年4月</span>
+            <h4 class="text-body-lg font-body-lg font-semibold mt-1 text-primary">帰国・日越共生Lab 本格始動</h4>
+            <p class="text-body-md font-body-md text-on-surface-variant mt-1">東京を拠点に、日越共生をテーマにしたビジネスを展開予定。本の出版も予定。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- スキル・資格 -->
+  <section class="w-full px-margin-mobile md:px-margin-desktop py-section-padding bg-tertiary text-on-tertiary">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <div class="md:col-span-4">
+        <h2 class="text-headline-lg font-headline-lg">スキル・資格</h2>
+        <p class="text-body-md font-body-md text-on-tertiary-container opacity-80 mt-4">7年間で培った専門スキル</p>
+      </div>
+      <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <div class="border border-on-tertiary-container/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">translate</span>
+          <h4 class="text-body-lg font-body-lg font-semibold mb-2">ベトナム語</h4>
+          <p class="text-body-md font-body-md text-on-tertiary-container">ホーチミン市人文社会科学大学ベトナム学部卒業。ビジネスレベル。</p>
+        </div>
+        <div class="border border-on-tertiary-container/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">menu_book</span>
+          <h4 class="text-body-lg font-body-lg font-semibold mb-2">日本語教育能力検定試験</h4>
+          <p class="text-body-md font-body-md text-on-tertiary-container">2020年取得。国家資格取得に向けて準備中。</p>
+        </div>
+        <div class="border border-on-tertiary-container/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">location_on</span>
+          <h4 class="text-body-lg font-body-lg font-semibold mb-2">北部・南部ベトナムの知見</h4>
+          <p class="text-body-md font-body-md text-on-tertiary-container">ホーチミン（南部）・ハノイ・ハロン（北部）での生活経験。</p>
+        </div>
+        <div class="border border-on-tertiary-container/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">interpreter_mode</span>
+          <h4 class="text-body-lg font-body-lg font-semibold mb-2">通訳・翻訳</h4>
+          <p class="text-body-md font-body-md text-on-tertiary-container">企業向け通訳、入管同行通訳、書類翻訳など実績多数。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- フッター -->
+<footer class="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter bg-tertiary border-t border-on-tertiary-container/20">
+  <div class="md:col-span-4">
+    <div class="text-headline-md font-headline-md font-bold text-on-tertiary">日越共生Lab</div>
+    <p class="text-label-sm font-label-sm text-on-tertiary-container opacity-60 mt-4">© 2027 日越共生Lab / 小中悠一郎</p>
+  </div>
+  <div class="md:col-span-8 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start mt-8 md:mt-0">
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="index.html">ホーム</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="service.html">サービス</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="media.html">実績</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="contact.html">お問い合わせ</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>サービス | 日越共生Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-container-low": "#f5f3f3", "background": "#fbf9f8",
+        "secondary": "#bb0014", "tertiary": "#0f1112", "outline": "#757681",
+        "primary": "#000d33", "surface-container-lowest": "#ffffff",
+        "on-tertiary": "#ffffff", "secondary-fixed": "#ffdad6",
+        "surface": "#fbf9f8", "on-primary": "#ffffff", "on-secondary": "#ffffff",
+        "on-surface": "#1b1c1c", "tertiary-container": "#242626",
+        "tertiary-fixed-dim": "#c6c6c7", "primary-container": "#002060",
+        "outline-variant": "#c5c6d2", "on-background": "#1b1c1c",
+        "on-tertiary-container": "#8c8d8d", "surface-container": "#efeded",
+        "on-surface-variant": "#444650", "primary-fixed-dim": "#b4c5ff",
+        "surface-variant": "#e4e2e2", "secondary-container": "#e71421",
+      },
+      "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      "spacing": { "gutter": "24px", "section-padding": "120px", "margin-mobile": "20px", "base": "8px", "container-max": "1280px", "margin-desktop": "64px" },
+      "fontFamily": { "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Hanken Grotesk"], "display-lg": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Hanken Grotesk"] },
+      "fontSize": {
+        "body-lg": ["18px", {"lineHeight": "28px"}], "body-md": ["16px", {"lineHeight": "24px"}],
+        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}
+</script>
+<style>.material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; display: inline-block; white-space: nowrap; -webkit-font-smoothing: antialiased; }
+.bg-bamboo-pattern { background-image: radial-gradient(#c5c6d2 1px, transparent 1px); background-size: 24px 24px; }</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+
+<!-- ナビゲーション -->
+<nav class="bg-surface border-b border-outline-variant top-0 sticky z-50">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+    <a href="index.html" class="text-headline-md font-headline-md font-bold text-primary">日越共生<span class="text-secondary">Lab</span></a>
+    <div class="hidden md:flex gap-8 items-center h-full">
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="index.html">ホーム</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="profile.html">プロフィール</a>
+      <a class="text-primary border-b-2 border-secondary font-bold h-full flex items-center pt-1" href="service.html">サービス</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="media.html">実績</a>
+      <a class="text-on-surface-variant hover:text-secondary transition-colors h-full flex items-center" href="contact.html">お問い合わせ</a>
+    </div>
+    <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 font-label-sm text-label-sm hover:bg-primary-container transition-colors uppercase tracking-wider">お問い合わせ</a>
+  </div>
+</nav>
+
+<main>
+  <!-- ヒーロー -->
+  <section class="relative py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-b border-outline-variant overflow-hidden">
+    <div class="absolute inset-0 bg-bamboo-pattern opacity-30 z-0"></div>
+    <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+      <div class="md:col-span-8">
+        <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-4">サービス</span>
+        <h1 class="font-display-lg text-headline-lg md:text-display-lg text-primary mb-6 leading-tight">
+          日本とベトナムをつなぐ、<br/><span class="text-secondary">4つの専門サポート。</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          7年間のベトナム生活・JICA経験・ベトナム語能力を活かし、日本企業とベトナム人をつなぐ架け橋となります。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- サービス一覧 -->
+  <section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min">
+
+      <!-- サービス01 大カード -->
+      <article class="md:col-span-12 group bg-surface-container-lowest border border-outline-variant p-8 md:p-12 transition-all duration-300 flex flex-col md:flex-row gap-12 items-start">
+        <div class="flex-1">
+          <div class="w-12 h-12 bg-surface-container-low flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-secondary text-2xl">groups</span>
+          </div>
+          <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-4">01</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-4" style="font-size:32px;">ベトナム人雇用サポート（企業向け）</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+            ベトナム人スタッフの採用・定着・育成に課題を抱える日本企業をサポートします。通訳・翻訳から、職場環境のアドバイス、文化的背景の説明まで、現場目線でお手伝いします。
+          </p>
+          <ul class="space-y-3 font-body-md text-body-md text-on-surface mb-8">
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>通訳・翻訳サポート</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>採用プロセスのアドバイス</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>特定技能・技能実習の受け入れサポート</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>ベトナム人従業員との職場コミュニケーション改善</li>
+          </ul>
+          <div class="bg-surface-container-low p-6 border-l-4 border-secondary">
+            <p class="text-body-md font-body-md text-on-surface-variant">丸一（宮城県・特定技能登録支援機関）、新居浜自動車教習所（愛媛県）など複数企業でのサポート実績あり。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- サービス02 -->
+      <article class="md:col-span-6 bg-surface-container-lowest border border-outline-variant p-8 md:p-12 transition-all duration-300 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-12 h-12 border border-outline-variant flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-primary text-2xl">school</span>
+          </div>
+          <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-4">02</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-4">日本語指導（ベトナム人向け）</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+            日本で働くベトナム人を対象に、職場で使える実践的な日本語を指導します。企業との契約による出張指導や、個人レッスンにも対応しています。
+          </p>
+          <ul class="space-y-3 font-body-md text-body-md text-on-surface mb-8">
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>企業出張指導（ベトナム人従業員向け）</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>個人レッスン（オンライン・対面）</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>ビジネス日本語・日常日本語</li>
+          </ul>
+          <div class="bg-surface-container-low p-4 text-label-sm font-label-sm text-on-surface-variant">
+            資格：日本語教育能力検定試験取得 / JICA海外協力隊として大学で指導経験
+          </div>
+        </div>
+        <a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 mt-8" href="contact.html">
+          お問い合わせ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </article>
+
+      <!-- サービス03 -->
+      <article class="md:col-span-6 bg-surface-container-lowest border border-outline-variant p-8 md:p-12 transition-all duration-300 flex flex-col justify-between h-full">
+        <div>
+          <div class="w-12 h-12 border border-outline-variant flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-primary text-2xl">trending_up</span>
+          </div>
+          <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-4">03</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-4">ベトナムビジネスコンサル</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+            ベトナムへの進出を検討している企業や個人に向けて、現地情報・文化・ビジネス慣習などをアドバイスします。北部（ハノイ・ハロン）・南部（ホーチミン）両方の経験から、リアルな情報を提供します。
+          </p>
+          <ul class="space-y-3 font-body-md text-body-md text-on-surface mb-8">
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>ベトナム市場・文化情報の提供</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>現地ビジネス立ち上げアドバイス</li>
+            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-secondary block flex-shrink-0"></span>北部・南部両エリアの情報</li>
+          </ul>
+          <div class="bg-surface-container-low p-4 text-label-sm font-label-sm text-on-surface-variant">
+            日中国際交流協会の医療ツーリズム事業アドバイスなど実績あり。
+          </div>
+        </div>
+        <a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase tracking-wider hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 mt-8" href="contact.html">
+          お問い合わせ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </article>
+
+      <!-- サービス04 大カード -->
+      <article class="md:col-span-12 bg-primary text-on-primary p-8 md:p-12 transition-all duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <div class="w-12 h-12 bg-primary-container flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary-fixed-dim text-2xl">mic</span>
+            </div>
+            <span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-4">04</span>
+            <h2 class="font-headline-lg text-headline-lg mb-4" style="font-size:32px;">講演・セミナー・情報発信</h2>
+            <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-8">
+              ベトナム留学・就労・日越共生をテーマにした講演・セミナーを行います。学校・企業・地域団体など、様々な場でお話しすることが可能です。
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="text-label-sm font-label-sm text-primary-fixed-dim uppercase tracking-wider mb-2">テーマ例</h4>
+            <div class="border border-primary-container p-4">
+              <p class="text-body-md font-body-md">「慶應を辞めてベトナムの大学に入った理由」</p>
+            </div>
+            <div class="border border-primary-container p-4">
+              <p class="text-body-md font-body-md">「日本に住むベトナム人と共に生きるヒント」</p>
+            </div>
+            <div class="border border-primary-container p-4">
+              <p class="text-body-md font-body-md">「ベトナム7年間で学んだこと」</p>
+            </div>
+            <div class="border border-primary-container p-4">
+              <p class="text-body-md font-body-md">「JICA協力隊の経験から見た日越教育事情」</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-surface-container-low border-t border-outline-variant py-section-padding px-margin-mobile md:px-margin-desktop text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-headline-md text-headline-md text-primary mb-4">まずはお気軽にご相談ください</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+        料金はご相談内容によって異なります。どんな小さなご相談もお待ちしています。<br/>2営業日以内にご返信いたします。
+      </p>
+      <a href="contact.html" class="bg-primary text-on-primary px-8 py-4 font-label-sm text-label-sm hover:bg-primary-container transition-colors uppercase tracking-wider inline-flex items-center gap-2">
+        お問い合わせはこちら <span class="material-symbols-outlined text-sm">mail</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- フッター -->
+<footer class="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter bg-tertiary">
+  <div class="md:col-span-4">
+    <div class="text-headline-md font-headline-md font-bold text-on-tertiary">日越共生Lab</div>
+    <p class="text-label-sm font-label-sm text-on-tertiary-container opacity-60 mt-4">© 2027 日越共生Lab / 小中悠一郎</p>
+  </div>
+  <div class="md:col-span-8 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start mt-8 md:mt-0">
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="index.html">ホーム</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="profile.html">プロフィール</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="media.html">実績</a>
+    <a class="text-label-sm font-label-sm text-on-tertiary-container opacity-80 hover:text-secondary-fixed transition-colors" href="contact.html">お問い合わせ</a>
+  </div>
+</footer>
+
+</body>
+</html>
